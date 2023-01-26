@@ -1,0 +1,130 @@
+<body>
+  <br><br>
+  <div class="contain">
+    <div class="row">
+      <div class="card">
+        <!-- <h5 class="card-header">Beginner's Level</h5> -->
+        <div class="card-body">
+          <img id="iconCard" src="assets/img/van.jpg" alt="">
+          <h5>Teacher Oms</h5>
+          <p>Hour Rate: &#8369; 801</p>
+          <h5>Info:</h5>
+          <p>Name: Omne Jean Pelingon</p>
+          <p>Bachelor's Degree: {{degree}}</p>
+          <p>School Graduated: University of the Philippines </p>
+          <p>Awards: </p>
+        </div>
+
+      </div>
+      <div class="card">
+        <!-- <h5 class="card-header">Beginner's Level</h5> -->
+        <div class="card-body">
+          <img id="iconCard" src="assets/img/van.jpg" alt="">
+          <h5 class="card-title">Teacher Van</h5>
+          <p>Hour Rate: &#8369; 800</p>
+          <h5>Info:</h5>
+          <p>Name: Vanessa Sagolili</p>
+          <p>Bachelor's Degree: {{degree}}</p>
+          <p>School Graduated: Harvard University </p>
+          <p>Awards: </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card">
+
+        <div class="card-body">
+          <img id="iconCard" src="assets/img/van.jpg" alt="">
+          <h5 class="card-title">Teacher Mai</h5>
+          <p>Hour Rate: &#8369; 800</p>
+          <h5>Info:</h5>
+          <p>Name: Jamaila Paquiabas</p>
+          <p>Bachelor's Degree: {{degree}}</p>
+          <p>School Graduated: Ateneo de Manila University</p>
+          <p>Awards: </p>
+          <p>Langugage: Japanese(nihongo)</p>
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <img id="iconCard" src="assets/img/van.jpg" alt="">
+          <h5 class="card-title">Teacher Leah</h5>
+          <p>Hour Rate: &#8369; 800</p>
+          <h5>Info:</h5>
+          <p>Name: Leah Mangmang</p>
+          <p>Bachelor's Degree: {{degree}}</p>
+          <p>School Graduated: De La Salle University</p>
+          <p>Awards: </p>
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="booking">
+    <button type="button" id="bookBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+      Book
+    </button>
+    <!-- Modal 2 with validation-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-danger" id="exampleModal2Label">Booking Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="inputChoices" class="form-label"></label>
+                <select id="inputChoices" class="form-select" >
+                  <option value="">TEACHER...</option>
+                  <option value="student">Teacher Oms</option>
+                  <option value="teach">Teacher Van</option>
+                  <option value="teach">Teacher Mai</option>
+                  <option value="teach">Teacher Leah</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputFullName" class="form-label"></label>
+                <input type="text" formControlName="fullname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"  id="inputFullName" placeholder="Full Name">
+                <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                  <div *ngIf="f['name'].errors?.['required']">Full Name is required</div>
+               </div>
+              </div>
+              <div class="mb-2 col-md-6" id="time">
+                <ejs-timepicker placeholder="Select start time" style="margin: 5% auto;"></ejs-timepicker>
+                <ejs-timepicker placeholder="Select end time" style="margin: 5% auto;"></ejs-timepicker>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"></label>
+                <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"  id="inputEmail4" placeholder="Email Address">
+                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                  <div *ngIf="f['email'].errors?.['required']">Email is required</div>
+                  <div *ngIf="f['email'].errors?.['email']">Email must be a valid email address</div>
+               </div>
+              </div>
+              <div class="mb-3">
+                <label for="scheddate" class="form-label">Schedule Date</label>
+                <input type="date" class="form-control" id="scheddate" required >
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"></label>
+                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" id="inputPassword4" placeholder="Password">
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                  <div *ngIf="f['password'].errors?.['required']">Password is required</div>
+               </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>

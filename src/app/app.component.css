@@ -1,0 +1,18 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.message{
+  width: 40px;
+  float: right;
+  margin-top: 18px;
+  margin-right: 100px;
+}
+.message:hover{
+  cursor: pointer;
+}
+
+

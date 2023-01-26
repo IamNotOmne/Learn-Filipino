@@ -1,0 +1,22 @@
+<body>
+  <div class="boxContainer">
+    <div class="logoCont">
+      <img [src]="icon" alt="SF_logo">
+    </div>
+    <div class="inputCont">
+      <form >
+        <input type="text" placeholder="Email" required>
+        <br>
+        <input type="password" placeholder="Password" required>
+        <br>
+        <div id="loginBtn">
+          <button (click)="logIn()">LOG IN</button>
+        </div>
+        <p id="signUp">Don't have an account? <span id="signUp-mr"><a routerLink="/create-account"> Create account</a></span></p>
+      </form>
+
+    </div>
+
+   </div>
+
+</body>

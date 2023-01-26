@@ -1,0 +1,62 @@
+.carouselBox{
+  margin-top: 70px;
+  background-color: yellow;
+}
+.carouselBox img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-caption{
+  margin-bottom: 10px;
+}
+.cover{
+  background-image: url(https://i0.wp.com/langfocus.com/wp-content/uploads/2020/03/mahal-kita-tagalog-i-love-you-1-3.png?fit=564%2C392&ssl=1);
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container{
+  margin-top: 20px;
+}
+
+.int{
+  text-align: center;
+  padding: 50px;
+}
+.first
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.one{
+  position: relative;
+  flex: 1;
+  max-width: 460px;
+  height: auto;
+  margin: 10px;
+  /* border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+}
+.example{
+  position: relative;
+  flex: 1;
+  max-width: 460px;
+  height: auto;
+  margin: 10px;
+  /* border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+}
+p{
+  font-style: italic;
+}
+#hr
+{
+  width: 50px;
+  height: 5px;
+  background-color: black;
+}
+
+
